@@ -400,7 +400,7 @@ if page == "🏠 Dashboard":
     st.markdown("""
         <div class='main-header'>
             <h1>🔐 Fraud Detection System</h1>
-            <p>Enterprise-grade real-time fraud detection powered by advanced machine learning</p>
+            <p>Live risk signals for transaction flow</p>
         </div>
     """, unsafe_allow_html=True)
     
@@ -459,7 +459,7 @@ if page == "🏠 Dashboard":
         st.markdown("""
             <div class='card'>
                 <div class='card-title'>⚡ Real-Time Detection</div>
-                <p>Sub-millisecond fraud predictions on every transaction for immediate action</p>
+                <p>Live scoring</p>
                 <span class='badge badge-success'>Active</span>
             </div>
         """, unsafe_allow_html=True)
@@ -468,7 +468,7 @@ if page == "🏠 Dashboard":
         st.markdown("""
             <div class='card'>
                 <div class='card-title'>🔍 Advanced Analytics</div>
-                <p>Deep insights into transaction patterns and fraud characteristics</p>
+                <p>Pattern view</p>
                 <span class='badge badge-info'>Available</span>
             </div>
         """, unsafe_allow_html=True)
@@ -477,7 +477,7 @@ if page == "🏠 Dashboard":
         st.markdown("""
             <div class='card'>
                 <div class='card-title'>🛡️ High Accuracy</div>
-                <p>98.06% ROC-AUC with optimal balance between catch rate and false alarms</p>
+                <p>High signal</p>
                 <span class='badge badge-success'>Verified</span>
             </div>
         """, unsafe_allow_html=True)
@@ -493,10 +493,10 @@ if page == "🏠 Dashboard":
         st.markdown(f"""
             <div class='card'>
                 <div class='card-title'>Algorithm & Configuration</div>
-                <p><strong>Model Type:</strong> {config['model_name']}</p>
-                <p><strong>Optimal Threshold:</strong> {config['optimal_threshold']:.4f}</p>
-                <p><strong>Training Method:</strong> Supervised Learning with SMOTE</p>
-                <p><strong>Total Parameters:</strong> Optimized via RandomizedSearchCV</p>
+                <p><strong>Model:</strong> {config['model_name']}</p>
+                <p><strong>Threshold:</strong> {config['optimal_threshold']:.4f}</p>
+                <p><strong>Pipeline:</strong> SMOTE + tuning</p>
+                <p><strong>Status:</strong> Ready</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -504,10 +504,10 @@ if page == "🏠 Dashboard":
         st.markdown(f"""
             <div class='card'>
                 <div class='card-title'>Performance Metrics</div>
-                <p><strong>True Positive Rate:</strong> {config['recall']:.2%}</p>
-                <p><strong>False Positive Rate:</strong> ~{(1-config['precision'])*100:.1f}%</p>
-                <p><strong>ROC-AUC Score:</strong> {config['roc_auc']:.4f}</p>
-                <p><strong>Model Status:</strong> ✅ Production Ready</p>
+                <p><strong>Recall:</strong> {config['recall']:.2%}</p>
+                <p><strong>Precision:</strong> {config['precision']:.2%}</p>
+                <p><strong>ROC-AUC:</strong> {config['roc_auc']:.4f}</p>
+                <p><strong>Mode:</strong> Production</p>
             </div>
         """, unsafe_allow_html=True)
 
@@ -515,7 +515,7 @@ elif page == "📊 Real-Time Prediction":
     st.markdown("""
         <div class='main-header'>
             <h1>📊 Real-Time Fraud Detection</h1>
-            <p>Analyze transaction details and get instant fraud assessment</p>
+            <p>Compact signal view</p>
         </div>
     """, unsafe_allow_html=True)
     
@@ -714,7 +714,7 @@ elif page == "📈 Model Analytics":
     st.markdown("""
         <div class='main-header'>
             <h1>📈 Model Analytics & Insights</h1>
-            <p>Comprehensive analysis of model performance and characteristics</p>
+            <p>Compact performance view</p>
         </div>
     """, unsafe_allow_html=True)
     
@@ -814,7 +814,7 @@ elif page == "📈 Model Analytics":
             <div class='card'>
                 <div class='card-title'>🤖 Algorithm</div>
                 <p><strong>{config['model_name']}</strong></p>
-                <p style='color: #cbd5e1; font-size: 0.9em;'>Gradient boosting classifier optimized for financial fraud detection</p>
+                <p style='color: #cbd5e1; font-size: 0.9em;'>Gradient boosting</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -823,7 +823,7 @@ elif page == "📈 Model Analytics":
             <div class='card'>
                 <div class='card-title'>🎯 Decision Threshold</div>
                 <p><strong>{config['optimal_threshold']:.4f}</strong></p>
-                <p style='color: #cbd5e1; font-size: 0.9em;'>Optimized to maximize F1-score and balance precision/recall</p>
+                <p style='color: #cbd5e1; font-size: 0.9em;'>Decision boundary</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -832,7 +832,7 @@ elif page == "📈 Model Analytics":
             <div class='card'>
                 <div class='card-title'>📊 Input Features</div>
                 <p><strong>{config['n_features']} Features</strong></p>
-                <p style='color: #cbd5e1; font-size: 0.9em;'>1 Time + 1 Amount + 28 PCA Components (V1-V28)</p>
+                <p style='color: #cbd5e1; font-size: 0.9em;'>Time + Amount + PCA</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -848,10 +848,9 @@ elif page == "📈 Model Analytics":
             st.markdown("""
                 <div class='card'>
                     <div class='card-title'>⏱️ Temporal Feature</div>
-                    <p><strong>Feature:</strong> Time</p>
-                    <p><strong>Description:</strong> Number of seconds elapsed from the start of the dataset</p>
-                    <p><strong>Range:</strong> 0 - 172,792 seconds</p>
-                    <p><strong>Purpose:</strong> Captures temporal patterns in fraud (time-of-day effects)</p>
+                    <p><strong>Time</strong></p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>Sequence signal</p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>0 - 172,792 sec</p>
                 </div>
             """, unsafe_allow_html=True)
         
@@ -859,20 +858,18 @@ elif page == "📈 Model Analytics":
             st.markdown("""
                 <div class='card'>
                     <div class='card-title'>💰 Transaction Feature</div>
-                    <p><strong>Feature:</strong> Amount</p>
-                    <p><strong>Description:</strong> Transaction value in currency units</p>
-                    <p><strong>Range:</strong> $0 - $25,691.16</p>
-                    <p><strong>Purpose:</strong> Fraudsters typically avoid high-value transactions</p>
+                    <p><strong>Amount</strong></p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>Value signal</p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>$0 - $25,691.16</p>
                 </div>
             """, unsafe_allow_html=True)
         
         st.markdown("""
             <div class='card dark-card' style='margin-top: 20px;'>
                 <div class='card-title'>🔐 PCA Components (V1-V28)</div>
-                <p><strong>Features:</strong> 28 Principal Component Analysis transformed features</p>
-                <p><strong>Anonymization:</strong> Original features are transformed for privacy protection</p>
-                <p><strong>Normalization:</strong> Standardized to zero mean and unit variance</p>
-                <p><strong>Purpose:</strong> Capture complex patterns and interactions in transaction data</p>
+                <p><strong>V1-V28</strong></p>
+                <p style='color: #cbd5e1; font-size: 0.9em;'>Abstract feature layer</p>
+                <p style='color: #cbd5e1; font-size: 0.9em;'>Privacy-preserving signal</p>
                 <p style='color: #cbd5e1; margin-top: 15px;'><em>Note: V1-V28 are anonymized due to confidentiality agreements</em></p>
             </div>
         """, unsafe_allow_html=True)
@@ -936,11 +933,9 @@ elif page == "⚙️ System Settings":
             st.markdown(f"""
                 <div class='card'>
                     <div class='card-title'>🎯 Core Parameters</div>
-                    <p><strong>Algorithm:</strong> {config['model_name']}</p>
-                    <p><strong>Model Type:</strong> Binary Classifier</p>
-                    <p><strong>Training Method:</strong> Supervised Learning</p>
-                    <p><strong>Optimization:</strong> RandomizedSearchCV</p>
-                    <p><strong>Cross-Validation:</strong> Stratified K-Fold (k=5)</p>
+                    <p><strong>{config['model_name']}</strong></p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>Binary classifier</p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>Tuned pipeline</p>
                 </div>
             """, unsafe_allow_html=True)
         
@@ -949,9 +944,8 @@ elif page == "⚙️ System Settings":
                 <div class='card'>
                     <div class='card-title'>🎚️ Decision Boundary</div>
                     <p><strong>Optimal Threshold:</strong> <span style='color: #667eea; font-weight: bold;'>{config['optimal_threshold']:.4f}</span></p>
-                    <p><strong>Purpose:</strong> Maximizes F1-Score</p>
-                    <p><strong>Below Threshold:</strong> Classified as Legitimate</p>
-                    <p><strong>Above Threshold:</strong> Classified as Fraudulent</p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>Boundary tuning</p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>Below: legit | Above: fraud</p>
                 </div>
             """, unsafe_allow_html=True)
         
@@ -998,12 +992,12 @@ elif page == "⚙️ System Settings":
         # Detailed interpretation
         st.markdown("""
             <div class='info-box'>
-                <h4>📖 Metric Interpretation</h4>
+                <h4>📖 Metric Snapshot</h4>
                 <ul>
-                    <li><strong>ROC-AUC (0.9806):</strong> Excellent discriminative ability - model effectively distinguishes between fraud and legitimate</li>
-                    <li><strong>Recall (77.55%):</strong> Catches 77.55% of actual frauds - good coverage but ~22% of frauds may pass</li>
-                    <li><strong>Precision (88.37%):</strong> 88.37% of fraud alerts are true frauds - minimizes unnecessary customer friction</li>
-                    <li><strong>F1-Score (0.8261):</strong> Good balance between precision and recall</li>
+                    <li><strong>ROC-AUC:</strong> 0.9806</li>
+                    <li><strong>Recall:</strong> 77.55%</li>
+                    <li><strong>Precision:</strong> 88.37%</li>
+                    <li><strong>F1-Score:</strong> 0.8261</li>
                 </ul>
             </div>
         """, unsafe_allow_html=True)
@@ -1017,11 +1011,9 @@ elif page == "⚙️ System Settings":
             st.markdown("""
                 <div class='card'>
                     <div class='card-title'>🔬 Training Configuration</div>
-                    <p><strong>Training Samples:</strong> 227,846 (after 80-20 split)</p>
-                    <p><strong>Test Samples:</strong> 56,961</p>
-                    <p><strong>SMOTE Ratio:</strong> 1:1 (balanced)</p>
-                    <p><strong>Random State:</strong> 42</p>
-                    <p><strong>Feature Scaling:</strong> StandardScaler</p>
+                    <p><strong>227,846</strong></p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>Balanced train set</p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>SMOTE + scaling</p>
                 </div>
             """, unsafe_allow_html=True)
         
@@ -1029,11 +1021,9 @@ elif page == "⚙️ System Settings":
             st.markdown("""
                 <div class='card'>
                     <div class='card-title'>⚙️ Model Tuning</div>
-                    <p><strong>Search Method:</strong> RandomizedSearchCV</p>
-                    <p><strong>Iterations:</strong> 10</p>
-                    <p><strong>CV Folds:</strong> 3</p>
-                    <p><strong>Scoring Metric:</strong> ROC-AUC</p>
-                    <p><strong>Parallel Jobs:</strong> -1 (All cores)</p>
+                    <p><strong>RandomizedSearchCV</strong></p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>10 trials</p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>ROC-AUC objective</p>
                 </div>
             """, unsafe_allow_html=True)
         
@@ -1045,10 +1035,10 @@ elif page == "⚙️ System Settings":
                 <h4>📋 Data Preprocessing Pipeline</h4>
                 <ol>
                     <li>Train-Test Split (80-20, stratified)</li>
-                    <li>StandardScaler: Normalize all features to μ=0, σ=1</li>
-                    <li>SMOTE Oversampling: Applied only to training data</li>
-                    <li>Model Training: On balanced training set</li>
-                    <li>Evaluation: On original test set (no SMOTE)</li>
+                    <li>StandardScaler normalization</li>
+                    <li>SMOTE on training data</li>
+                    <li>Model fit</li>
+                    <li>Test on original split</li>
                 </ol>
             </div>
         """, unsafe_allow_html=True)
@@ -1062,10 +1052,9 @@ elif page == "⚙️ System Settings":
             st.markdown(f"""
                 <div class='card'>
                     <div class='card-title'>📦 Model Artifacts</div>
-                    <p><strong>Model File:</strong> fraud_model.pkl</p>
-                    <p><strong>Scaler File:</strong> scaler.pkl</p>
-                    <p><strong>Config File:</strong> model_config.json</p>
-                    <p><strong>Total Size:</strong> ~242 KB</p>
+                    <p><strong>fraud_model.pkl</strong></p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>scaler.pkl + config</p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>~242 KB total</p>
                 </div>
             """, unsafe_allow_html=True)
         
@@ -1073,10 +1062,9 @@ elif page == "⚙️ System Settings":
             st.markdown("""
                 <div class='card'>
                     <div class='card-title'>🌐 Deployment Info</div>
-                    <p><strong>Framework:</strong> Streamlit</p>
-                    <p><strong>Runtime Environment:</strong> Python 3.13</p>
-                    <p><strong>Status:</strong> ✅ Production Ready</p>
-                    <p><strong>Last Updated:</strong> 2026-05-07</p>
+                    <p><strong>Streamlit</strong></p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>Python 3.13</p>
+                    <p style='color: #cbd5e1; font-size: 0.9em;'>Production ready</p>
                 </div>
             """, unsafe_allow_html=True)
         
@@ -1087,11 +1075,10 @@ elif page == "⚙️ System Settings":
             <div class='warning-box'>
                 <h4>🔧 System Requirements</h4>
                 <ul>
-                    <li><strong>Python Version:</strong> 3.8+</li>
-                    <li><strong>Required Packages:</strong> scikit-learn, xgboost, streamlit, joblib</li>
-                    <li><strong>Memory (Inference):</strong> ~50 MB minimum</li>
-                    <li><strong>Inference Time:</strong> <5ms per transaction</li>
-                    <li><strong>Concurrent Users:</strong> Limited by Streamlit Cloud tier</li>
+                    <li><strong>Python:</strong> 3.8+</li>
+                    <li><strong>Packages:</strong> streamlit, xgboost, joblib</li>
+                    <li><strong>Memory:</strong> ~50 MB</li>
+                    <li><strong>Latency:</strong> <5ms</li>
                 </ul>
             </div>
         """, unsafe_allow_html=True)
