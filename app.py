@@ -60,6 +60,29 @@ st.markdown("""
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         transform: translateY(-2px);
     }
+
+    .dark-card {
+        background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+        color: #f8fafc;
+        border-left: 5px solid #8b5cf6;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.45);
+    }
+
+    .dark-card:hover {
+        box-shadow: 0 14px 36px rgba(15, 23, 42, 0.6);
+    }
+
+    .dark-card .card-title,
+    .dark-card p,
+    .dark-card strong,
+    .dark-card em {
+        color: #f8fafc;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
+    }
+
+    .dark-card p {
+        line-height: 1.65;
+    }
     
     .card-title {
         font-size: 1.3em;
@@ -778,7 +801,7 @@ elif page == "📈 Model Analytics":
             """, unsafe_allow_html=True)
         
         st.markdown("""
-            <div class='card' style='margin-top: 20px;'>
+            <div class='card dark-card' style='margin-top: 20px;'>
                 <div class='card-title'>🔐 PCA Components (V1-V28)</div>
                 <p><strong>Features:</strong> 28 Principal Component Analysis transformed features</p>
                 <p><strong>Anonymization:</strong> Original features are transformed for privacy protection</p>
