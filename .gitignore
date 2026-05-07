@@ -1,0 +1,77 @@
+# ============================================
+# PYTHON & ENVIRONMENT
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+ENV/
+.venv
+.env
+.env.local
+
+# ============================================
+# JUPYTER NOTEBOOK
+# ============================================
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# ============================================
+# IDE & EDITOR
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# STREAMLIT SPECIFIC
+# ============================================
+.streamlit/
+.streamlit/secrets.toml
+.streamlit/cache/
+
+# ============================================
+# LOGS & TEMP FILES
+# ============================================
+*.log
+*.pot
+*.mo
+*.db
+*.tmp
+.cache/
+.pytest_cache/
+
+# ============================================
+# OS SPECIFIC
+# ============================================
+.DS_Store
+Thumbs.db
+*.lnk
+
+# ============================================
+# CREDENTIALS & SECRETS
+# ============================================
+.env
+.env.local
+secrets.json
+credentials/
+api_keys.txt
+*.pem
+*.key
+
+# ============================================
+# MISCELLANEOUS
+# ============================================
+.local/
+.ropeproject/
+*.egg-info/
+dist/
+build/
+
