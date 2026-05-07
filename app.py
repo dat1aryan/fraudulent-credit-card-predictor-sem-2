@@ -172,21 +172,24 @@ st.markdown("""
         font-weight: 600;
         margin-right: 8px;
         margin-bottom: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.22);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
     }
     
     .badge-success {
-        background-color: #d4edda;
-        color: #155724;
+        background: linear-gradient(135deg, #14532d 0%, #166534 100%);
+        color: #ecfdf5;
     }
     
     .badge-danger {
-        background-color: #f8d7da;
-        color: #721c24;
+        background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+        color: #fef2f2;
     }
     
     .badge-info {
-        background-color: #d1ecf1;
-        color: #0c5460;
+        background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+        color: #eff6ff;
     }
     
     /* Input styling */
@@ -207,21 +210,28 @@ st.markdown("""
     
     /* Button styling */
     .stButton > button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border: none;
+        background: linear-gradient(135deg, #0f172a 0%, #312e81 100%);
+        color: #f8fafc;
+        border: 1px solid rgba(124, 58, 237, 0.55);
         padding: 12px 30px;
         border-radius: 8px;
         font-weight: 600;
         font-size: 1em;
         cursor: pointer;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.28);
     }
     
     .stButton > button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.42);
+        border-color: rgba(167, 139, 250, 0.75);
+        background: linear-gradient(135deg, #111827 0%, #4338ca 100%);
+    }
+
+    .stButton > button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25), 0 12px 28px rgba(15, 23, 42, 0.42);
     }
     
     /* Stat row */
