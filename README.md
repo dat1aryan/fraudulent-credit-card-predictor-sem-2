@@ -9,6 +9,7 @@
 [![Pandas](https://img.shields.io/badge/Pandas-2.0-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![NumPy](https://img.shields.io/badge/NumPy-1.24-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 [![Plotly](https://img.shields.io/badge/Plotly-5.17-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://fradulent-credit-card-predictor.streamlit.app/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 ---
@@ -48,6 +49,8 @@ streamlit run app.py
 
 **Access Application:** http://localhost:8501
 
+**Live App:** [https://fradulent-credit-card-predictor.streamlit.app/](https://fradulent-credit-card-predictor.streamlit.app/)
+
 ---
 
 ## 🌐 Cloud Deployment
@@ -66,7 +69,7 @@ streamlit run app.py
 
 3. **Live URL**
    ```
-   https://YOUR_USERNAME-fraudulent-credit-card-predictor-sem-2.streamlit.app
+   https://fradulent-credit-card-predictor.streamlit.app/
    ```
 
 **Deployment Time:** First deployment 2-3 min, subsequent updates 1-2 min
@@ -405,6 +408,6 @@ Contributions are welcome! Please:
 
 *Enterprise-grade. Production-ready. Open source.*
 
-[⭐ Star on GitHub](https://github.com/dat1aryan/fraudulent-credit-card-predictor-sem-2) | [🚀 Try Live](https://YOUR_USERNAME-fraudulent-credit-card-predictor-sem-2.streamlit.app) | [📖 Documentation](README.md)
+[⭐ Star on GitHub](https://github.com/dat1aryan/fraudulent-credit-card-predictor-sem-2) | [🚀 Try Live](https://fradulent-credit-card-predictor.streamlit.app/) | [📖 Documentation](README.md)
 
 </div>
