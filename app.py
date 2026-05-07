@@ -47,17 +47,18 @@ st.markdown("""
     
     /* Card styling */
     .card {
-        background: white;
+        background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+        color: #f8fafc;
         padding: 25px;
         border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.32);
         margin-bottom: 20px;
-        border-left: 5px solid #667eea;
+        border-left: 5px solid #7c3aed;
         transition: all 0.3s ease;
     }
     
     .card:hover {
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 14px 38px rgba(15, 23, 42, 0.45);
         transform: translateY(-2px);
     }
 
@@ -75,9 +76,21 @@ st.markdown("""
     .dark-card .card-title,
     .dark-card p,
     .dark-card strong,
-    .dark-card em {
+    .dark-card em,
+    .dark-card li,
+    .dark-card span {
         color: #f8fafc;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
+    }
+
+    .card .card-title,
+    .card p,
+    .card strong,
+    .card em,
+    .card li,
+    .card span {
+        color: #f8fafc;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.10);
     }
 
     .dark-card p {
@@ -87,7 +100,8 @@ st.markdown("""
     .card-title {
         font-size: 1.3em;
         font-weight: 600;
-        color: #2d3748;
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
         margin-bottom: 15px;
         display: flex;
         align-items: center;
@@ -224,16 +238,22 @@ st.markdown("""
     /* Tab styling */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
+        background: #0f172a;
+        padding: 8px;
+        border-radius: 12px;
     }
     
     .stTabs [data-baseweb="tab"] {
-        border-radius: 8px 8px 0 0;
-        background-color: #f0f2f6;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+        color: #e5e7eb;
+        border: 1px solid rgba(148, 163, 184, 0.2);
     }
     
     .stTabs [aria-selected="true"] {
-        background-color: #667eea;
+        background: linear-gradient(135deg, #667eea 0%, #7c3aed 100%);
         color: white;
+        box-shadow: 0 0 18px rgba(124, 58, 237, 0.35);
     }
     
     /* Info box */
@@ -275,9 +295,9 @@ st.markdown("""
     .footer {
         text-align: center;
         padding: 30px;
-        color: #999;
+        color: #cbd5e1;
         font-size: 0.9em;
-        border-top: 1px solid #eee;
+        border-top: 1px solid rgba(148, 163, 184, 0.18);
         margin-top: 50px;
     }
     </style>
@@ -304,7 +324,7 @@ with st.sidebar:
     st.markdown("""
         <div style='text-align: center; padding: 20px 0;'>
             <h2 style='color: #667eea;'>🔐 Fraud Guard</h2>
-            <p style='color: #999; font-size: 0.9em;'>Enterprise Fraud Detection</p>
+            <p style='color: #cbd5e1; font-size: 0.9em;'>Enterprise Fraud Detection</p>
         </div>
     """, unsafe_allow_html=True)
     
@@ -378,7 +398,7 @@ if page == "🏠 Dashboard":
             st.markdown(f"""
                 <div class='stat-box'>
                     <h3 style='color: #667eea; margin: 0 0 10px 0;'>{value}</h3>
-                    <p style='color: #999; margin: 0; font-size: 0.9em;'>{label}</p>
+                    <p style='color: #cbd5e1; margin: 0; font-size: 0.9em;'>{label}</p>
                 </div>
             """, unsafe_allow_html=True)
     
@@ -748,7 +768,7 @@ elif page == "📈 Model Analytics":
             <div class='card'>
                 <div class='card-title'>🤖 Algorithm</div>
                 <p><strong>{config['model_name']}</strong></p>
-                <p style='color: #999; font-size: 0.9em;'>Gradient boosting classifier optimized for financial fraud detection</p>
+                <p style='color: #cbd5e1; font-size: 0.9em;'>Gradient boosting classifier optimized for financial fraud detection</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -757,7 +777,7 @@ elif page == "📈 Model Analytics":
             <div class='card'>
                 <div class='card-title'>🎯 Decision Threshold</div>
                 <p><strong>{config['optimal_threshold']:.4f}</strong></p>
-                <p style='color: #999; font-size: 0.9em;'>Optimized to maximize F1-score and balance precision/recall</p>
+                <p style='color: #cbd5e1; font-size: 0.9em;'>Optimized to maximize F1-score and balance precision/recall</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -766,7 +786,7 @@ elif page == "📈 Model Analytics":
             <div class='card'>
                 <div class='card-title'>📊 Input Features</div>
                 <p><strong>{config['n_features']} Features</strong></p>
-                <p style='color: #999; font-size: 0.9em;'>1 Time + 1 Amount + 28 PCA Components (V1-V28)</p>
+                <p style='color: #cbd5e1; font-size: 0.9em;'>1 Time + 1 Amount + 28 PCA Components (V1-V28)</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -807,7 +827,7 @@ elif page == "📈 Model Analytics":
                 <p><strong>Anonymization:</strong> Original features are transformed for privacy protection</p>
                 <p><strong>Normalization:</strong> Standardized to zero mean and unit variance</p>
                 <p><strong>Purpose:</strong> Capture complex patterns and interactions in transaction data</p>
-                <p style='color: #999; margin-top: 15px;'><em>Note: V1-V28 are anonymized due to confidentiality agreements</em></p>
+                <p style='color: #cbd5e1; margin-top: 15px;'><em>Note: V1-V28 are anonymized due to confidentiality agreements</em></p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -822,7 +842,7 @@ elif page == "📈 Model Analytics":
         st.markdown("""
             <div class='stat-box'>
                 <h3 style='color: #667eea; margin: 0 0 10px 0;'>284,807</h3>
-                <p style='color: #999; margin: 0; font-size: 0.9em;'>Total Transactions</p>
+                <p style='color: #cbd5e1; margin: 0; font-size: 0.9em;'>Total Transactions</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -830,7 +850,7 @@ elif page == "📈 Model Analytics":
         st.markdown("""
             <div class='stat-box'>
                 <h3 style='color: #51cf66; margin: 0 0 10px 0;'>284,315</h3>
-                <p style='color: #999; margin: 0; font-size: 0.9em;'>Legitimate Cases</p>
+                <p style='color: #cbd5e1; margin: 0; font-size: 0.9em;'>Legitimate Cases</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -838,7 +858,7 @@ elif page == "📈 Model Analytics":
         st.markdown("""
             <div class='stat-box'>
                 <h3 style='color: #ff6b6b; margin: 0 0 10px 0;'>492</h3>
-                <p style='color: #999; margin: 0; font-size: 0.9em;'>Fraudulent Cases</p>
+                <p style='color: #cbd5e1; margin: 0; font-size: 0.9em;'>Fraudulent Cases</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -846,7 +866,7 @@ elif page == "📈 Model Analytics":
         st.markdown("""
             <div class='stat-box'>
                 <h3 style='color: #ffd43b; margin: 0 0 10px 0;'>0.173%</h3>
-                <p style='color: #999; margin: 0; font-size: 0.9em;'>Class Imbalance Ratio</p>
+                <p style='color: #cbd5e1; margin: 0; font-size: 0.9em;'>Class Imbalance Ratio</p>
             </div>
         """, unsafe_allow_html=True)
 
@@ -1048,7 +1068,7 @@ st.markdown("""
                 <strong>Version:</strong> 1.0.0
             </div>
         </div>
-        <p style='margin-top: 20px; font-size: 0.85em; color: #999;'>
+        <p style='margin-top: 20px; font-size: 0.85em; color: #cbd5e1;'>
             © 2026 Fraud Detection System | Enterprise-Grade Real-Time Protection | 
             <strong>Protecting transactions. Preventing fraud. Building trust.</strong>
         </p>
