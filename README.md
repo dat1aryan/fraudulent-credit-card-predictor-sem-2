@@ -400,24 +400,6 @@ Contributions are welcome! Please:
 
 ---
 
-## 📞 Support & Contact
-
-- **GitHub Issues**: [Report bugs](https://github.com/dat1aryan/fraudulent-credit-card-predictor-sem-2/issues)
-- **Discussions**: [Ask questions](https://github.com/dat1aryan/fraudulent-credit-card-predictor-sem-2/discussions)
-- **Live App**: [Try the demo](https://YOUR_USERNAME-fraudulent-credit-card-predictor-sem-2.streamlit.app)
-
----
-
-## 📊 Acknowledgments
-
-- **Dataset**: [Credit Card Fraud Detection Dataset](https://www.kaggle.com/mlg-ulb/creditcardfraud)
-- **Framework**: [Streamlit](https://streamlit.io/) for rapid web app development
-- **ML Library**: [XGBoost](https://xgboost.readthedocs.io/) for powerful gradient boosting
-- **Community**: Built with feedback from ML practitioners
-
----
-
-<div align="center">
 
 **Built with ❤️ for fraud prevention**
 
